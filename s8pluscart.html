@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Add to Cart</title>
+<script>
+var products = new Array(); var sum=0;
+function cart(price)
+{
+	
+	products.push(price);
+	sum = 0;
+	for(var i=0; i<products.length;i++)
+	{
+		sum = sum + Number(products[i]);
+	}
+	document.getElementById('Bill').innerHTML = "Total Bill : Rs "+sum;
+}
+</script>
+<style>
+#item{
+	padding:10px;
+	height:auto;
+	width:auto;
+	color:#33F;
+	background-color:#999;
+	border-color:#06F;
+	border-style:solid;
+	float:left;
+	margin-left:500px;
+	margin-top:80px;
+	font-size:14px;
+}
+#item input{
+	margin-left:27%;
+	padding:8px;
+
+}
+#Bill{
+	font-weight:bold;
+	font-size:30px;
+	text-align:center;
+	height:38px;
+	background-color:#999;
+	width:auto;
+	clear:both;
+	margin:100px;
+	border:2px solid gray;
+}
+</style>
+</head>
+
+<body>
+<div id="item">
+	<h1>Samsung A7 2016 <br> Rs 48000 </h1>
+    <div class="col-md-3"><img src="samsung/GalaxyA72016s.jpg" height="200" width="200" class="thumbnail"/><p class="para1"></p></div>
+	<input type="button" onClick="cart(48000)" value="Add To Cart" /><p></p>
+	</div>
+	
+	<div id="Bill">
+	</div>
+	<hr>
+	
+	</body>
+</body>
+</html>
